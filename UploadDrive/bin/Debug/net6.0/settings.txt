@@ -1,0 +1,57 @@
+NOTA FISCAL
+
+codigo_nota: 1
+data_nota: 20/07/2020
+
+produto 1:
+	nome_produto: pasta de dente 
+	preco_produto: 3 reais
+produto 2:
+	nome_produto:farinha
+	preco_produto: 7 reais
+
+
+
+
+ERRADO, FAZENDO HOJE:
+
+1, 20/07/2020, pasta de dente, 3 reais, farinha, 7 reais
+
+O CERTO A SE FAZER:
+
+1, 20/07/2020, pasta de dente, 3 reais
+1, 20/07/2020, farinha, 7 reais
+
+
+
+
+
+codigo_nota, data_nota
+
+ambiente no config
+diretorio no config
+                Ambiente = "valfranautmotiva",
+                Usuario = "APIVALFRAN",
+                Senha = "123456"
+
+
+
+Server=bespin.agentemr.com.br, 2432;Database=db_RecrutamentoASP;User Id=RecrutamentoASP;Password=7zj@U&lAffNo;
+
+Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=MyECommerceDB;Data Source=LOCALHOST\\SQLEXPRESS; Trusted_Connection=True; TrustServerCertificate=True;
+
+database first:
+Scaffold-DbContext "Server=bespin.agentemr.com.br, 2432;Database=db_RecrutamentoASP;User Id=RecrutamentoASP;Password=7zj@U&lAffNo;Encrypt=False;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
+
+Injeção de dependecia:
+builder.Services.AddEntityFrameworkSqlServer().AddDbContext<BancoContext>(o => o.UseSqlServer(builder.Configuration.GetConnectionString("DataBase")));
+
+Executar Procedure:
+var contatos = _bancoContext.Contatos.FromSqlRaw("EXEC ListarContatos").ToList();
+
+
+
+Projetos com asp net:
+Agenda
+Controle de finanças
+
