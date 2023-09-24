@@ -14,12 +14,12 @@ namespace UploadDrive
     class Program
     {
         private const string PathToServiceAccountKeyFile = @"C:\Users\Ryan\Desktop\cred\ServiceAccountCred.json";
-        private const string ServiceAccountEmail = @"teste-891@vivid-router-398012.iam.gserviceaccount.com";
+        private const string ServiceAccountEmail = @"youservice";
         private const string UploadFileName = "cred";
-        private const string DirectoryId = @"1yj1WiwQhZ5pYaFj9Ua6CU0tjCZBuNxKd";
-        private const string LocalFolderPath = @"C:\Users\Ryan\Desktop\cred\profile-filialId-8171";
-        private const string folderId = @"15b7gKDzoBgzE6li_-ePDyG49IqCXPuEs";
-        private const string folderName = "profile-filialId-8171";
+        private const string DirectoryId = @"yourDirectory";
+        private const string LocalFolderPath = @"yourLocal";
+        private const string folderId = @"yourId";
+        private const string folderName = "yourfolderName";
 
 
         static async Task Main(string[] args)
